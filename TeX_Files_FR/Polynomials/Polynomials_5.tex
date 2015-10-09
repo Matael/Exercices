@@ -1,0 +1,55 @@
+\bexo
+What are the roots of  $X^3+26X^2+23X-50 $ ?
+\eexo
+\solution{
+1 is one root of the polynomial. It is then possible to factorize by $(X-1)$. This can be done by two means. \\
+
+The first one is euclidian division
+\begin{equation}
+	\begin{array}{r|l}
+	{X^3+26X^2+23X-50}&{X-1}\\	 \hline
+	{27X^2+23X-50} &{X^2+27X+50}\\
+	{50X-50}&
+	\end{array}
+\end{equation}
+
+
+The second method is the identification 
+
+\begin{align}
+	X^3+26X^2+23X-50&=(X-1)(aX^2+bX+c)\\
+	&=aX^3+(b-a)X^2+(c-b)X-c
+\end{align}
+By identification of the coefficients in $X^3$:
+\begin{equation}
+	a=1.
+\end{equation}
+By identification of the coefficients in $X^2$:
+\begin{equation}
+	b-a=26 \so b=27.
+\end{equation}
+By identification of the coefficients in $X$:
+\begin{equation}
+	c-b=23 \so c=50.
+\end{equation}
+We should check that this value of $c$ is Ok and leads to an identification of the term of zero order. This is the case, and an easy way to check if the calculus is well done. 
+
+The two other roots of out polynomial are the one of $X^2+27X+50$. Once more, two methods to find the result. \\
+
+The first one is the classical one
+\begin{equation}
+	\Delta=27^2-4\times 50=529=23^2
+\end{equation}
+
+The two roots are then
+\begin{equation}
+	\dfrac{-27±\pm\sqrt{\Delta}}{2}\so X=-25 \tr{ and } X=-2.
+\end{equation}
+
+The second method corresponds to the formula
+\begin{equation}
+	(X-a)(X-b)=X^2-(a+b)X+ab
+\end{equation}
+Hence $a+b=-27$ and $ab=50$. The two roots are then $-25$ and $-2$.
+
+}

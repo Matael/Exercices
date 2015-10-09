@@ -1,0 +1,33 @@
+\bexo
+Show that the set of functions $y$ solution of 
+\begin{equation}\label{eq:ex linalg 3}
+	y''(x)+5y'(x)+3y(x)=0
+\end{equation}
+is a vector space.
+\eexo
+\solution{
+Let $y_1$ and $y_2$ be two solutions of \refeq{eq:ex linalg 3}:
+\begin{equation}
+	y''_1(x)+5y'_1(x)+3y_1(x)=0\esp y''_2(x)+5y'_2(x)+3y_2(x)=0
+\end{equation}
+By adding these two equations 
+\begin{equation}
+	y''_1(x)+y''_2(x)+5(y'_1(x)+y'_2(x))+3(y_1(x)+y_2(x))=0.
+\end{equation}
+By linearity of the derivation 
+\begin{equation}
+	(y_1+y_2)''(x)+5(y_1+y_2)'(x)+3(y_1(x)+y_2(x))=0.
+\end{equation}
+Hence $y_1+y_2$ is solution of \refeq{eq:ex linalg 3}.
+Let $\lambda$ be a real number
+\begin{equation}
+	\lambda (y''_1(x)+5y'_1(x)+3y_1(x))=0.
+\end{equation}
+Consequently
+\begin{equation}
+	(\lambda y)''_1(x)+5(\lambda y)'_1(x)+3(\lambda y_1)(x))=0.
+\end{equation}
+
+Hence $\lambda y_1$ is solution of \refeq{eq:ex linalg 3}. 
+
+}

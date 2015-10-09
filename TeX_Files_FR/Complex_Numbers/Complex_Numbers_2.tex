@@ -1,0 +1,57 @@
+\bexo 
+\bi
+\it Let consider a line $\mc{L}$ of equation $a x+b y+c=0$, with $a$, $b$ and $c$ three real numbers.  What is the complex equation of the line?
+\it Let consider a circle of equation $(x-x_0)^2+(y-y_0)^2=R^2$, with $R$ the radius, and $x_0$ and $y_0$ two real numbers associated to the center of the circle. What is the complex equation of the circle ?\\
+\it What is the inverse of $\mc{L}$?
+\ei
+\eexo
+
+\solution{
+\bi
+\it
+Let consider the expressions of real and imaginary parts of $z$ 
+\be
+x=\dfrac{z+\cj{z}}{2}\esp y=\dfrac{z-\cj{z}}{2j}
+\ee
+The equation of the line then becomes:
+\be
+\left(
+\dfrac{a}{2}+\dfrac{b}{2j}
+\right)z+\left(
+\dfrac{a}{2}-\dfrac{b}{2j}
+\right)\cj{z}+c=0
+\ee
+or
+\be
+\cj{\omega} z+\omega\cj{z}+c=0 \esp \omega=\left(
+\dfrac{a}{2}+j\dfrac{b}{2}
+\right)
+\ee
+\it
+Let $z_0=x_0+jy_0$ be the complex number associated to the center of the circle. If one considers $z'=z-z_0$, the equation of the circle becomes
+\be 
+z'\cj{z'}=R^2
+\ee
+Hence the complex equation of the circle is:
+\be 
+z\cj{z}-z_0\cj{z}-\cj{z_0}z=R^2-\abs{z_0}^2.
+\ee
+\item Let $z$ be the affix of one element in the inverse of $\mc{L}$. Then $1/z$ is solution of the complex equation of the line:
+\be
+\dfrac{\cj{\omega}}{z}+\dfrac{\omega}{\cj{z}}+c=0
+\ee
+This equation becomes
+\be
+\cj{\omega}\cj{z}+{\omega}{z}+cz\cj{z}=0
+\ee
+We can identify a form close to a complex equation of a circle:
+\be
+z\cj{z}-z_0\cj{z}+\cj{z_0}{z}=0 \esp z_0=\dfrac{\cj{\omega}}{c}.
+\ee
+As the right hand side is null, the radius of the circle is $\abs{z_0}$:
+\be
+z\cj{z}-z_0\cj{z}+\cj{z_0}{z}=R^2-\abs{z_0}^2 \esp z_0=\dfrac{\cj{\omega}}{c}\esp 
+R=\abs{z_0}.
+\ee
+\ei
+}

@@ -1,0 +1,227 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdftex 2014.11.16)  1 SEP 2015 17:25
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**/Users/olivier/Documents/Enseignement/Maths_scales/Exercices/linalg/linalg_17.tex
+(/Users/olivier/Documents/Enseignement/Maths_scales/Exercices/linalg/linalg_17.tex
+/Users/olivier/Documents/Enseignement/Maths_scales/Exercices/linalg/linalg_17.tex:1: Undefined control sequence.
+l.1 \bexo
+         
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/olivier/Documents/Enseignement/Maths_scales/Exercices/linalg/linalg_17.tex:3: Undefined control sequence.
+l.3 \begin
+          {equation}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/olivier/Documents/Enseignement/Maths_scales/Exercices/linalg/linalg_17.tex:4: Undefined control sequence.
+l.4 [\tb
+        {M}]=\left[
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/olivier/Documents/Enseignement/Maths_scales/Exercices/linalg/linalg_17.tex:4: Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \left 
+l.4 [\tb{M}]=\left
+                  [
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/olivier/Documents/Enseignement/Maths_scales/Exercices/linalg/linalg_17.tex:5: Undefined control sequence.
+l.5 \begin
+          {array}{ccc}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/olivier/Documents/Enseignement/Maths_scales/Exercices/linalg/linalg_17.tex:6: Misplaced alignment tab character &.
+l.6 {2}&
+        {-1}&{0}\\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/Users/olivier/Documents/Enseignement/Maths_scales/Exercices/linalg/linalg_17.tex:6: Misplaced alignment tab character &.
+l.6 {2}&{-1}&
+             {0}\\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Runaway argument?
+ {0}&{ 1}&{-1}\\ {0}&{ 0}&{3} \end {array} \right ] \end {equation} \begin \ETC.
+/Users/olivier/Documents/Enseignement/Maths_scales/Exercices/linalg/linalg_17.tex:17: Paragraph ended before \\ was complete.
+<to be read again> 
+                   \par 
+l.17 
+     
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+/Users/olivier/Documents/Enseignement/Maths_scales/Exercices/linalg/linalg_17.tex:17: Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.17 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/olivier/Documents/Enseignement/Maths_scales/Exercices/linalg/linalg_17.tex:17: Missing \right. inserted.
+<inserted text> 
+                \right .
+<to be read again> 
+                   $
+<to be read again> 
+                   \par 
+l.17 
+     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/Users/olivier/Documents/Enseignement/Maths_scales/Exercices/linalg/linalg_17.tex:18: Undefined control sequence.
+l.18 \begin
+           {equation}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/olivier/Documents/Enseignement/Maths_scales/Exercices/linalg/linalg_17.tex:19: Undefined control sequence.
+l.19 [\tb
+         {M}']=\left[
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/olivier/Documents/Enseignement/Maths_scales/Exercices/linalg/linalg_17.tex:19: Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \left 
+l.19 [\tb{M}']=\left
+                    [
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/olivier/Documents/Enseignement/Maths_scales/Exercices/linalg/linalg_17.tex:20: Undefined control sequence.
+l.20 \begin
+           {array}{ccc}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/olivier/Documents/Enseignement/Maths_scales/Exercices/linalg/linalg_17.tex:21: Misplaced alignment tab character &.
+l.21 {4}&
+         {-2}&{0}\\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/Users/olivier/Documents/Enseignement/Maths_scales/Exercices/linalg/linalg_17.tex:21: Misplaced alignment tab character &.
+l.21 {4}&{-2}&
+              {0}\\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Runaway argument?
+ {0}&{ 2}&{-2}\\ {0}&{ 0}&{6} \end {array} \right ] \end {equation} \end \ETC.
+/Users/olivier/Documents/Enseignement/Maths_scales/Exercices/linalg/linalg_17.tex:28: Paragraph ended before \\ was complete.
+<to be read again> 
+                   \par 
+l.28 
+     
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+/Users/olivier/Documents/Enseignement/Maths_scales/Exercices/linalg/linalg_17.tex:28: Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.28 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/olivier/Documents/Enseignement/Maths_scales/Exercices/linalg/linalg_17.tex:28: Missing \right. inserted.
+<inserted text> 
+                \right .
+<to be read again> 
+                   $
+<to be read again> 
+                   \par 
+l.28 
+     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/Users/olivier/Documents/Enseignement/Maths_scales/Exercices/linalg/linalg_17.tex:34: Undefined control sequence.
+l.34 \eexo
+          
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/olivier/Documents/Enseignement/Maths_scales/Exercices/linalg/linalg_17.tex:35: Undefined control sequence.
+l.35 \solution
+              {
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+)
+! Emergency stop.
+<*> ...Maths_scales/Exercices/linalg/linalg_17.tex
+                                                  
+*** (job aborted, no legal \end found)
+
+!  ==> Fatal error occurred, no output PDF file produced!

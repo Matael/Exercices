@@ -1,0 +1,50 @@
+\bexo
+Let consider two harmonic (at circular frequency $\omega$) fields $p(t)$ and $v(t)$. In complex representation, with a positive time convention $\e^{+j\omega t}$, their complex amplitudes are respectively denoted by $\hat{p}$ and $\hat{v}$.\\
+
+The energy flow $W(t)$ at time $t$ is given by 
+\begin{equation} 
+W(t)=p(t)v(t).
+\end{equation}
+
+The average operator for any periodic function $P(t)$ of period $T$ is given by:
+\begin{equation}
+<P>=\dfrac{1}{T} \ds{\int_0^{T}} P(t) \d t.
+\end{equation}
+
+\begin{itemize}
+\item What is the value of $<v>$ ?
+\item What is the value of $<W>$ ? 
+\end{itemize}\eexo
+
+
+\solution{
+
+$<v>=0$ trivially as in this case $T=2\pi/\omega$
+\begin{align}
+	<v>=\dfrac{1}{T} \ds{\int_0^{T}} \re{\hat{v}e^{j\omega t}} \d t&=\dfrac{1}{T} \re{\ds{\int_0^{T}} \hat{v}e^{j\omega t} \d t}\\
+		&=\dfrac{1}{T} \re{\hat{v} \left[\dfrac{e^{j\omega t}}{j\omega} \right]_0^T}=0
+\end{align}
+
+Concerning $W$
+\begin{align}
+	<W>&=\dfrac{1}{T} \ds{\int_0^{T}} \re{\hat{p}e^{j\omega t}}\re{\hat{v}e^{j\omega t}} \d t\\
+	   &=\dfrac{1}{T} \ds{\int_0^{T}} \left[
+	   \dfrac{\hat{p}e^{j\omega t}+\hat{p}\st e^{-j\omega t} }{2}
+	   \dfrac{\hat{v}e^{j\omega t}+\hat{v}\st e^{-j\omega t} }{2}
+	   \right] \d t\\
+	   	    &=\dfrac{1}{4T} 
+	   	    \ds{\int_0^{T}} \left[
+	   \hat{p}\hat{v}e^{2j\omega t}+\hat{p}\hat{v} \st
+	   +\hat{p}\st\hat{v}+\hat{v}\st\hat{p}\st e^{-2j\omega t}
+	   \right] \d t
+\end{align}
+The two oscillating terms are zero averaged. The other are constants Hence 
+\begin{align}
+	<W>&=
+	    \dfrac{1}{4T} \ds{\int_0^{T}} \left[
+	   \hat{p}\hat{v}\st+\hat{p}\st\hat{v}  \right] \d t =\dfrac{1}{4T}  \left[
+	   \hat{p}\hat{v}\st+\hat{p}\st\hat{v}  \right] T\\
+	   &=\dfrac{1}{2}\re{\hat{p}\hat{v}\st}.
+\end{align}
+
+}

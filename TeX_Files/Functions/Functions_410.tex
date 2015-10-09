@@ -1,0 +1,45 @@
+\bexo
+Let a function $f:\mb{R}^2\rightarrow \mb{R}$ defined by
+\begin{equation}
+f(x,y)=x^2+2xy+y^2.
+\end{equation}
+Let the variable change in polar coordinates 
+\begin{equation}
+x=r\cos(\theta),y=r\sin(\theta).
+\end{equation}
+Let $\hat{f}:\mb{R}^2\rightarrow \mb{R}$ defined by:
+\begin{equation}
+	\hat{f}(r,\theta)=f(x(r,\theta),y(r,\theta)).
+\end{equation}
+Compute by \underline{\tb{two}} different means $\dfrac{\p \hat{f}}{\p r}$ and $\dfrac{\p \hat{f}}{\p \theta}$
+
+
+
+
+\eexo
+\solution{
+\tb{Method \# 1:}
+\begin{equation}
+\hat{f}(r,\theta)=r^2(1+\cos(\theta)\sin(\theta)).	
+\end{equation}
+\begin{align}
+	\dfrac{\p \hat{f}}{\p r}&=2r(1+\cos(\theta)\sin(\theta))\\
+		\dfrac{\p \hat{f}}{\p \theta}&=r^2(\cos^2(\theta)-\sin^2(\theta))=r^2\cos(2\theta)
+\end{align}
+\tb{Method \# 2:}
+
+\begin{align}
+	\dfrac{\p \hat{f}}{\p r}&=\dfrac{\p {f}}{\p x}\dfrac{\p x}{\p r}+\dfrac{\p {f}}{\p y}\dfrac{\p y}{\p r}\\
+	&=2(x+y)(\cos(\theta)+\sin(\theta))=2r(\cos(\theta)+\sin(\theta))^2\\
+	&=2r(1+2\cos(\theta)\sin(\theta))
+\end{align}
+
+
+\begin{align}
+	\dfrac{\p \hat{f}}{\p \theta}&=\dfrac{\p {f}}{\p x}\dfrac{\p x}{\p \theta}+\dfrac{\p {f}}{\p y}\dfrac{\p y}{\p \theta}\\
+	&=2(x+y)(-r\sin(\theta)+r\cos(\theta))\\&=2r^2(\cos^2(\theta)-\sin^2(\theta))=r^2\cos(2\theta)
+\end{align}
+
+
+
+}

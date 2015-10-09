@@ -1,0 +1,90 @@
+\bexo
+Let consider the following matrix:
+\begin{equation}
+[\tb{M}]=\left[
+\begin{array}{ccc}
+{2}&{-1}&{0}\\
+{0}&{ 1}&{-1}\\
+{0}&{ 0}&{3}
+\end{array}	
+\right]
+\end{equation}
+\begin{itemize}
+	\item What is the diagonal matrix $[\bs{\Lambda}]$  of the eigenvalues ?
+	\item What is the matrix $[\bs{\Phi}]$ of the eigenvectors of $[\textbf{M}]$? For each eigenvector, choose the one with a norm equal to one and a first component strictly positive.
+	\item What is the inverse $[\bs{\Psi}]$ of $[\bs{\Phi}]$ ?  
+	\item What is the image of matrix $[\tb{M}']$ in the basis $[\bs{\Phi}]$ of the eigenvectors of $[\tb{M}]$ with
+
+\begin{equation}
+[\tb{M}']=\left[
+\begin{array}{ccc}
+{4}&{-2}&{0}\\
+{0}&{ 2}&{-2}\\
+{0}&{ 0}&{6}
+\end{array}	
+\right].
+\end{equation}	
+\end{itemize}
+
+
+
+
+
+
+\eexo
+\solution{ $[\tb{M}]$ is upper triangular then the eigenvalues are the numbers of the diagonal. Hence,
+\begin{equation}
+	[\bs{\Lambda}]=\left[
+\begin{array}{ccc}
+{2}&{0}&{0}\\
+{0}&{ 1}&{0}\\
+{0}&{ 0}&{3}
+\end{array}	
+\right].
+\end{equation}
+They can also be computed by the traditional method:
+
+\begin{equation}
+	P(\lambda)=\det{[\tb{M}]-\lambda[\tb{I}]}=\left|
+\begin{array}{ccc}
+{2-\lambda}&{-1}&{0}\\
+{0}&{ 1-\lambda}&{-1}\\
+{0}&{ 0}&{3-\lambda}
+\end{array}	
+\right|=(2-\lambda)( 1-\lambda)(3-\lambda).
+\end{equation}
+
+%\underline{Eigenvector associated to $\lambda=2$}:
+
+The matrix $[\bs{\Phi}]$ of eigenvectors and its inverse $[\bs{\Psi}]$ are: 
+\begin{equation}
+	[\bs{\Phi}]=\left[
+\begin{array}{ccc}
+{1}&{\dfrac{\sqrt{2}}{2}}&{\dfrac{1}{\sqrt{6}}}\\
+{0}&{\dfrac{\sqrt{2}}{2}}&{-\dfrac{1}{\sqrt{6}}}\\
+{0}&{ 0}&{\dfrac{2}{\sqrt{6}}}
+\end{array}	
+\right]\esp
+[\bs{\Psi}]=\left[
+\begin{array}{ccc}
+{1}&{-1}&{-1}\\
+{0}&{{\sqrt{2}}}&{\dfrac{\sqrt{2}}{2}}\\
+{0}&{ 0}&{\dfrac{\sqrt{6}}{2}}
+\end{array}	
+\right] 
+\end{equation}
+The matrix $[\tb{M}']=2[\tb{M}]$ and the diagonalization of matrix $[\tb{M}]$ reads
+\begin{equation}
+	[\bs{\Lambda}]=[\bs{\Psi}][\tb{M}][\bs{\Psi}].
+\end{equation} 
+Hence,
+\begin{equation}
+	[\bs{\Psi}][\tb{M}'][\bs{\Psi}]=2[\bs{\Lambda}].
+\end{equation}
+
+
+
+
+
+
+}

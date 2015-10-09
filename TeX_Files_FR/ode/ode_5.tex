@@ -1,0 +1,39 @@
+\bexo
+What is the solution of  
+\begin{equation}
+	f''(x)-f'(x)-12f(x)-12=0,
+\end{equation}
+with 
+\begin{equation}
+	f(0)=5,\, f'(0)=17.
+\end{equation}
+
+\eexo
+\solution{
+The solution of this equation is the sum of a particular solution which do not satisfy the initial conditions and a general one associated to the homogeneous problem \ie{without forcing}.
+The particular solution is 
+\begin{equation}
+	f_p(x)=-1.
+\end{equation}
+The general solution is associated to 
+\begin{equation}
+	f''(x)-f'(x)-12f(x)=0.
+\end{equation}
+The characteristic polynomial is 
+\begin{equation}
+	p^2-p-12=0.
+\end{equation}
+The roots are $-3$ and $4$.\\
+We are then looking for a function of the form
+\begin{equation}
+	f(x)=Ae^{-3x}+Be^{4x}-1.
+\end{equation}
+With the initial conditions
+\begin{equation}
+	f(0)=A+B-1=5\esp f'(0)=-3A+4B=17.
+\end{equation}
+Hence: 
+\begin{equation}
+	A=1\esp B=5\so f(x)=e^{-3x}+5e^{4x}-1.
+\end{equation}
+}

@@ -1,0 +1,85 @@
+\bexo
+What is the solution of  
+\begin{equation}
+	m\ddot{x}(t)+c\ddot{x}(t)+kx(t)=F\cos(\omega t),
+\end{equation}
+with 
+\begin{equation}
+	x(0)=0,\, \dot{x}(0)=0.
+\end{equation}
+
+\eexo
+\solution{
+
+
+\begin{equation}
+	\ddot{x}(t)+\mu\ddot{x}(t)+\omega_0^2 x(t)=F'\cos(\omega t)\esp F'=\dfrac{F}{m}\esp \mu=\dfrac{c}{m}.
+\end{equation}
+
+
+The particular solution 
+\begin{equation}
+	x_p(t)=A\cos(\omega t)+B\sin(\omega t).
+\end{equation}
+
+
+\begin{equation}
+	(\omega^2_0-\omega^2)(A\cos(\omega t)+B\sin(\omega t))+\omega \mu (-A\sin(\omega t)+B\cos(\omega t))=F'\cos(\omega t).
+\end{equation}
+
+
+\begin{equation}
+	\left[
+		\begin{array}{cc}
+		{\omega^2_0-\omega^2m}&{\omega \mu}\\
+		{-\omega \mu}&{\omega^2_0-\omega^2}
+	\end{array}
+	\right]\left\{
+	\begin{array}{c}
+		{A}\\
+		{B}
+	\end{array}
+	\right\}=\left\{
+	\begin{array}{c}
+		{F'}\\
+		{0}
+	\end{array}
+	\right\}
+\end{equation}
+
+A necessary condition 
+
+\begin{equation}
+	(\omega^2_0-\omega^2)^2+\omega^2\mu^2 >0
+\end{equation}
+
+\begin{equation}
+	A=\dfrac{F'(\omega^2_0-\omega^2 )}{(\omega^2_0-\omega^2)^2+\omega^2\mu^2} \esp B=\dfrac{F'\omega \mu}{(\omega^2_0-\omega^2)^2+\omega^2\mu^2} 
+\end{equation}
+
+\begin{equation}
+	x_p(t)=\dfrac{F'}{\sqrt{(\omega^2_0-\omega^2)^2+\omega^2\mu^2}}\left(
+	\cos(\phi)
+	\cos(\omega t)+\sin(\phi) \sin(\omega t)
+	\right)
+\end{equation}
+with
+\begin{equation}
+	\cos(\phi)=\dfrac{\omega^2_0-\omega^2}{\sqrt{(\omega^2_0-\omega^2)^2+\omega^2\mu^2}} \esp
+	\sin(\phi)=\dfrac{\omega \mu}{\sqrt{(\omega^2_0-\omega^2)^2+\omega^2\mu^2}}
+\end{equation}
+
+\begin{equation}
+	x_p(t)=\dfrac{F'}{\sqrt{(k-\omega^2m)^2+\omega^2c^2}}
+	\cos(\omega t-\phi)
+\end{equation}
+
+
+
+\begin{equation}
+	\ddot{x}(t)+\mu\ddot{x}(t)+\omega_0^2 x(t)=0, x(t)=exp(-\alpha t)
+\end{equation}
+
+
+
+}

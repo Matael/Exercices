@@ -1,0 +1,120 @@
+\bexo
+We are considering the harmonic damped oscillator\footnote{oscillator harmonique amorti} of a mass $m$ linked to a rigid support by a spring\footnote{ressort} $k$. An external force $f(t)$ can be applied to this dynamical system. Hence the displacement $x(t)$ of the mass is governed by
+\begin{equation}
+	m\ddot{x}(t)+kx(t)=f(t).
+\end{equation}
+The numerical values of the parameters are 
+\begin{equation}
+	m=1 \esp k=1.
+\end{equation}
+At time $t=0$ , the initial condition of the system are
+\begin{equation}
+	x(0)=0\esp \dot{x}(0)=1.
+\end{equation}
+at time $t=1$, a constant force $f=-1$ is applied to the mass. 
+
+\begin{itemize}
+	\item What is the expression of the displacement $x(t)$ ?
+\end{itemize}
+
+
+
+%\begin{figure}[h]
+%\begin{center}
+%\begin{tikzpicture}
+%\path (-40mm,0);
+%\node[mass] at (2.4,0) {};
+%\draw[spring] (0,0.5) -- (1.65,0.5); 
+%\draw [damper] (0,-0.5) -- (1.65,-0.5);
+%% Rigid body
+%\draw[thick] (0,-1.5) -- (0,1.2);
+%\fill [pattern = north east lines] (-0.3,-1.5) rectangle (0,1.2);
+%\node[text width=5cm] at (3.2,0.1) {$k$};
+%\node[text width=5cm] at (3.2,-1) {$c$};
+%\node[text width=5cm] at (4.6,1) {$m$};
+%\node[text width=5cm] at (4.6,-1) {$x(t)$};
+%% Force under the mass
+%\draw [thick] (2.2,-1.4) -- (2.2,-1.2);
+%\draw [thick, ->] (2.2,-1.4) -- (2.7,-1.4);
+%\node[text width=5cm] at (4.5,-1.7) {$M f(t)$};
+%\end{tikzpicture}
+%\end{center}
+%\end{figure}
+
+
+
+\eexo
+\solution{
+
+
+\begin{equation}
+	\ddot{x}(t)+\mu\ddot{x}(t)+\omega_0^2 x(t)=F'\cos(\omega t)\esp F'=\dfrac{F}{m}\esp \mu=\dfrac{c}{m}.
+\end{equation}
+
+
+The particular solution 
+\begin{equation}
+	x_p(t)=A\cos(\omega t)+B\sin(\omega t).
+\end{equation}
+
+
+\begin{equation}
+	(\omega^2_0-\omega^2)(A\cos(\omega t)+B\sin(\omega t))+\omega \mu (-A\sin(\omega t)+B\cos(\omega t))=F'\cos(\omega t).
+\end{equation}
+
+
+\begin{equation}
+	\left[
+		\begin{array}{cc}
+		{\omega^2_0-\omega^2m}&{\omega \mu}\\
+		{-\omega \mu}&{\omega^2_0-\omega^2}
+	\end{array}
+	\right]\left\{
+	\begin{array}{c}
+		{A}\\
+		{B}
+	\end{array}
+	\right\}=\left\{
+	\begin{array}{c}
+		{F'}\\
+		{0}
+	\end{array}
+	\right\}
+\end{equation}
+
+A necessary condition 
+
+\begin{equation}
+	(\omega^2_0-\omega^2)^2+\omega^2\mu^2 >0
+\end{equation}
+
+\begin{equation}
+	A=\dfrac{F'(\omega^2_0-\omega^2 )}{(\omega^2_0-\omega^2)^2+\omega^2\mu^2} \esp B=\dfrac{F'\omega \mu}{(\omega^2_0-\omega^2)^2+\omega^2\mu^2} 
+\end{equation}
+
+\begin{equation}
+	x_p(t)=\dfrac{F'}{\sqrt{(\omega^2_0-\omega^2)^2+\omega^2\mu^2}}\left(
+	\cos(\phi)
+	\cos(\omega t)+\sin(\phi) \sin(\omega t)
+	\right)
+\end{equation}
+with
+\begin{equation}
+	\cos(\phi)=\dfrac{\omega^2_0-\omega^2}{\sqrt{(\omega^2_0-\omega^2)^2+\omega^2\mu^2}} \esp
+	\sin(\phi)=\dfrac{\omega \mu}{\sqrt{(\omega^2_0-\omega^2)^2+\omega^2\mu^2}}
+\end{equation}
+
+\begin{equation}
+	x_p(t)=\dfrac{F'}{\sqrt{(k-\omega^2m)^2+\omega^2c^2}}
+	\cos(\omega t-\phi)
+\end{equation}
+
+
+
+\begin{equation}
+	\ddot{x}(t)+\mu\ddot{x}(t)+\omega_0^2 x(t)=0, x(t)=exp(-\alpha t)
+\end{equation}
+
+
+
+}

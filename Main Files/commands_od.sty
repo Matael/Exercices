@@ -1,0 +1,166 @@
+
+
+\setcounter{tocdepth}{5}
+
+\renewcommand{\qedsymbol}{\ensuremath{\blacksquare}}
+
+%\newenvironment{exo}{\begin{exoexo}}{\qed \end{exoexo}}%
+
+\newmdtheoremenv[linecolor=magenta,linewidth=1.5pt]{exo}{\bcpanchant\underline{\tb{Exercice}}}[chapter]
+%bcpanchant\bcquestion
+\newcommand{\bexo}{\begin{exo}\normalfont}
+\newcommand{\eexo}{\end{exo}\vskip 0.3cm}
+\newmdtheoremenv[backgroundcolor=yellow!10,linecolor=magenta,linewidth=1.5pt]{sol}{\bclampe\underline{\tb{Solution}}}[chapter]
+\newmdtheoremenv[backgroundcolor=yellow!30,linecolor=red,linewidth=1.5pt]{exmp}{\underline{\tb{Example}}}[chapter]
+\newcommand{\bexmp}{\begin{exmp}\normalfont}
+\newcommand{\eexmp}{\end{exmp}\vskip 0.3cm}
+\newmdtheoremenv[backgroundcolor=gray!10,linewidth=1.5pt]{df}{\underline{\tb{Definition}}}[chapter]
+\newcommand{\bd}{\begin{df}\normalfont}
+\newcommand{\ed}{\end{df}\vskip 0.3cm}
+\newmdtheoremenv[backgroundcolor=blue!5,linewidth=1.5pt]{prp}{\underline{\tb{Property}}}[chapter]
+\newcommand{\bp}{\begin{prp}\normalfont}
+\newcommand{\ep}{\end{prp}\vskip 0.3cm}
+\newmdtheoremenv[backgroundcolor=magenta!5,linewidth=1.5pt]{mth}{\underline{\tb{Method}}}[chapter]
+\renewcommand{\bm}[1]{\begin{mth} \underline{#1}\\\normalfont }
+\renewcommand{\em}{\end{mth}\vskip 0.3cm}
+\newmdtheoremenv[backgroundcolor=yellow!5,linewidth=1.5pt]{rslt}{\underline{\tb{Result}}}[chapter]
+\newcommand{\br}{\begin{rslt}}
+\newcommand{\er}{\end{rslt}\vskip 0.3cm}
+
+\renewcommand{\arg}[1]{\textrm{arg}{\left(#1\right)}}
+
+\ifsolutions
+\newcommand{\solution}[1]{\begin{sol}\normalfont#1
+\end{sol}}
+\else
+\newcommand{\solution}[1]{}
+\fi
+
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\renewcommand{\it}{\item}
+\newcommand{\imp}{\, \Rightarrow\, }
+\newcommand{\eq}{\, \Longleftrightarrow\, }
+\newcommand{\orth}{^{\perp} }
+\newcommand{\tq}{\,|\, }
+\newcommand{\ul}{\underline}
+
+% Nouvelles commandes
+\newcommand{\ds}{\displaystyle}
+\newcommand{\tb}{\textbf}
+\newcommand{\tr}{\textrm}
+\newcommand{\bs}{\boldsymbol}
+\newcommand{\tp}{\,^{t}}
+\newcommand{\h}{\,^{h}}
+\newcommand{\mb}{\, \mathbb}
+%\newcommand{\pt}{\textbf{.}}
+\newcommand{\esp}{, \quad}
+\newcommand{\D}{\textrm{D}}
+\newcommand{\p}{\partial}
+
+\newcommand{\virt}[1]{\widehat{\textbf{#1}}}
+\newcommand{\To}{\longrightarrow}
+\newcommand{\abs}[1]{ \left\vert #1 \right\vert}
+\newcommand{\Gd}[1]{\,\boldsymbol{\nabla}#1\,}
+\newcommand{\Div}{\,\boldsymbol{\nabla}\textbf{.}}
+\newcommand{\gd}[1]{\,{\nabla}#1\,}
+\renewcommand{\div}{\, \nabla \textbf{.}}
+\newcommand{\Rot}{\,\boldsymbol{\nabla}\wedge}
+\newcommand{\rot}{\,\nabla \wedge}
+\newcommand{\wdt}[1]{\widetilde{#1}}
+\newcommand{\wtt}[1]{\breve{#1}}
+\newcommand{\cv}[1]{\ast}
+\renewcommand{\d}{\,\textrm{d}}
+\newcommand{\phys}[1]{\widetilde{#1}}
+\newcommand{\Four}[1]{\mc{F}\left(#1\right)}
+\newcommand{\Fouri}[1]{\mc{F}^*\left(#1\right)}
+
+
+\newcommand{\oiom}{\oint_{\partial \Omega}}
+\newcommand{\iom}{\int_{\Omega}}
+\newcommand{\iome}{\displaystyle{\int_{\Omega_e}}}
+
+\newcommand{\oiomO}{\oint_{\partial \Omega_0}}
+\newcommand{\iomO}{\int_{\Omega_0}}
+%\newcommand{\scal}[1][2]{\left<#1|#2\right>}
+\newcommand{\dev}[1]{\widehat{#1}}
+
+\newcommand{\mat}[1]{#1}
+\renewcommand{\mat}[1]{ \left[ \textbf{#1} \right]}
+\renewcommand{\:}{\tb{:}}
+\newcommand{\chapterm}[1]{\markboth{\chaptername \thechapter.
+ #1}{}}
+
+\newcommand{\np}{\newpage{\cleardoublepage}}
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bse}{\begin{subequations}}
+\newcommand{\ese}{\end{subequations}}
+
+
+\newcommand{\lb}[1]{\label{#1}}
+\newcommand{\refeq}[1]{(\ref{#1})}
+
+\newcommand{\w}[1]{textbf{#1}}
+
+\newcommand{\cj}{\overline}
+\newcommand{\norm}[1]{\left\Vert#1\right\Vert}
+\newcommand{\essnorm}[1]{\norm{#1}_{\ess}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\re}[1]{\Re{\left(#1\right)}}
+\newcommand{\im}[1]{\Im{\left(#1\right)}}
+\newcommand{\scal}[2]{\left<#1|#2\right>}
+% Fin nouvelles commandes
+
+\newcommand{\espa}{\vspace*{10cm}}
+\renewcommand{\mat}[1]{#1}
+%\newcommand{\cj}[1]{\overline{#1}}
+\newcommand{\mc}{\mathcal}
+\newcommand{\ov}{\overline}
+\newcommand{\etal}{\textit{et al.}\,}
+%Headers
+\newcommand{\Hunc}{\mc{H}^1(\Omega)}
+\newcommand{\Huncp}{\mc{H}^1_P(\Omega)}
+\newcommand{\st}{^*}
+\newcommand{\goodgap}{\hspace{\subfigtopskip}}
+\newcommand{\so}{\,\Longrightarrow}
+
+\newcommand{\ut}{$\{\tb{u}^s,\tb{u}^t\}\,$}
+\newcommand{\uU}{$\{\tb{u}^s,\tb{u}^f\}\,$}
+\newcommand{\uP}{$\{\tb{u}^s,P\}\,$}
+\newcommand\flash[1]{\colorbox{yellow}{\textbf{#1}}}
+\newcommand{\resp}[1]{(resp. {#1})}
+\newcommand{\dsum}[2]{\displaystyle{\sum_{#1}^{#2}}\,}
+\newcommand{\ie}[1]{(i.e. #1)}
+\newcommand{\e}{{e}}
+\newcommand{\dof}{$dof$}
+\renewcommand{\det}[1]{\tr{det}\left(#1\right)}
+
+\definecolor{red}{RGB}{255,0,0}
+\definecolor{green}{RGB}{0,255,0}
+\definecolor{blue}{RGB}{0,0,255}
+\definecolor{magenta}{RGB}{255,0,255}
+
+
+\newcommand{\more}{{\color{red}{\tb{To be completed}}}}
+\newcommand{\arevoir}{{\color{red}{\tb{Not satisfied}}}}
+
+\newcommand{\od}[1]{{\color{red} \bf#1}}
+\setlength{\unitlength}{1cm}
+
+ \renewcommand{\arraystretch}{2}
+ 
+ 
+ \tikzstyle{damper}=[thick,decoration={markings,  
+  mark connection node=dmp,
+  mark=at position 0.5 with 
+  {
+    \node (dmp) [thick,inner sep=0pt,transform shape,rotate=-90,minimum width=15pt,minimum height=3pt,draw=none] {};
+    \draw [thick] ($(dmp.north east)+(2pt,0)$) -- (dmp.south east) -- (dmp.south west) -- ($(dmp.north west)+(2pt,0)$);
+    \draw [thick] ($(dmp.north)+(0,-5pt)$) -- ($(dmp.north)+(0,5pt)$);
+  }
+}, decorate]
+
+\tikzstyle{spring}=[thick,decoration={aspect=0.5, segment length=1.5mm, amplitude=2mm,coil},decorate] 
+\tikzstyle{mass}=[rectangle,fill=black,inner sep=2.5mm,minimum width=1.5cm,minimum height=1.5cm]
+ 
