@@ -1,0 +1,27 @@
+\bexo
+
+What is the elementary matrix associated to the following weak form:
+\begin{equation}
+	\ds{\int_{0}^h} u(x)v(x)\,\d x 
+\end{equation}
+with the following discretisation
+\begin{equation}
+	u(x)=[\bs{\Phi}_1(x)\, | \bs{\Phi}_2(x)]
+	\begin{Bmatrix}
+		\tb{u}_1\\
+		\tb{u}_2
+	\end{Bmatrix}
+\end{equation}
+with 
+\begin{equation}
+	\bs{\Phi}_1(x)=\dfrac{x}{h} \esp \bs{\Phi}_2(x)=\dfrac{x}{h}
+\end{equation}
+
+\eexo
+
+\solution{
+\begin{equation}
+	\forall \,v\esp  \iom u(x)v(v)+u'(x)v(v)-u'(x)v'(x) \,\d\Omega=\iom f(x)v(x)\,\d\Omega. 
+\end{equation}
+
+}
