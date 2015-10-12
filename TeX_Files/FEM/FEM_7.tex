@@ -2,19 +2,21 @@
 
 What is the elementary matrix associated to the following weak form:
 \begin{equation}
-	\ds{\int_{0}^h} u(x)v'(x)\,\d x 
+	\ds{\int_{0}^h} u'(x)v''(x)\,\d x 
 \end{equation}
 with the following discretisation
 \begin{equation}
-	u(x)=[\bs{\Phi}_1(x)\, | \bs{\Phi}_2(x)]
+	u(x)=[\bs{\Phi}_1(x)\, | \bs{\Phi}_2(x)| \bs{\Phi}_3(x)]
 	\begin{Bmatrix}
 		\tb{u}_1\\
-		\tb{u}_2
+		\tb{u}_2\\
+		\tb{u}_3
 	\end{Bmatrix}
 \end{equation}
 with 
 \begin{equation}
-	\bs{\Phi}_1(x)=\dfrac{x}{h} \esp \bs{\Phi}_2(x)=\dfrac{x}{h}
+	\bs{\Phi}_1(x)=\dfrac{2x^2}{h^2}-\dfrac{3x}{h}+1 \esp \bs{\Phi}_2(x)=-\dfrac{4x^2}{h^2}+\dfrac{4x}{h}
+	\esp \bs{\Phi}_3(x)= \dfrac{2x^2}{h^2}-\dfrac{x}{h}.
 \end{equation}
 
 \eexo
