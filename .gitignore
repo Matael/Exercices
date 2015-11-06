@@ -1,4 +1,7 @@
-*.aux
+*~
+Exam*
+.DS_*
 *.log
+*.aux
 *.gz
 *.out
