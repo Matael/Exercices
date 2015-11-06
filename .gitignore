@@ -5,3 +5,5 @@ Exam*
 *.aux
 *.gz
 *.out
+*.ps
+*.dvi
