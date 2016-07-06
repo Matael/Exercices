@@ -1,0 +1,37 @@
+\bexo
+
+
+The Transfer Matrix of a layer of fluid of thickness $d$ relates the pressure and velocity on both sides of the layer. 
+\begin{equation}
+	\begin{Bmatrix}
+		p(d)\\
+		v(d)
+	\end{Bmatrix}=[\tb{T}]	\begin{Bmatrix}
+		p(0)\\
+		v(0)
+	\end{Bmatrix}
+\end{equation}
+
+
+
+The pressure $p$ and velocity $v$ can be given by can be written as function of space depending on two unknown constants $A$ and $B$:
+\begin{align}
+	v(x)&=A e^{-jkx}+B e^{jkx}\\
+	p(x)&=Z(A e^{-jkx}-B e^{jkx})
+\end{align}
+$k$ and $Z$ are respectively the wave number and characteristic impedance of the medium. 
+\begin{itemize}
+	\item Write the expression of $p$ and $v$ in $x=0$ and $x=d$. Deduce a matrical expression of the transfert matrix.
+	\item Write a function
+\begin{verbatim}
+	Transfer_Matrix(k,Z,d)
+\end{verbatim}
+which returns the Transfer Matrix
+
+\end{itemize}
+
+
+
+\eexo
+\solution{
+}

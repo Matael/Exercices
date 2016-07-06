@@ -1,0 +1,39 @@
+\bexo
+What is the SVD and the pseudo-inverse of the following matrix:
+\begin{equation}
+[\tb{M}]=\left[
+\begin{array}{cc}
+0&1\\
+0&1
+\end{array}
+\right]
+\end{equation}
+
+
+
+
+
+\eexo
+\solution{ 
+
+\begin{equation}
+	[\tb{M}]=[\tb{U}][\bs{\Sigma}][\tb{V}]^t
+\end{equation}
+with
+\begin{align}
+	[\tb{U}]&=\begin{bmatrix}
+		\dfrac{\sqrt{2}}{2} & -\dfrac{\sqrt{2}}{2}\\
+		\dfrac{\sqrt{2}}{2} & \dfrac{\sqrt{2}}{2}
+	\end{bmatrix}\\
+	[\bs{\Sigma}]&=\begin{bmatrix}
+		\sqrt{2} & 0\\
+		 0 & 0
+	\end{bmatrix}\\
+	[\tb{V}]&=\begin{bmatrix}
+		0 & -1\\
+		 1 & 0
+	\end{bmatrix}
+\end{align}
+
+
+}

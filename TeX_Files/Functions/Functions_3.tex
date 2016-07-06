@@ -1,0 +1,48 @@
+\bexo
+Acoustic propagation in circular coordinates leads to the Bessel Equation:
+\begin{equation*}
+r^2p''(r)+rp'(r)+(r^2-n^2)p(r)=0 \esp n\in\mb{N}.
+\end{equation*}
+
+ Show that the $J_n(r)$ function defined as a parametric integral is solution of this equation
+\begin{equation*}
+J_n(r)=\dfrac{1}{2\pi}\ds{\int_{-\pi}^{\pi}}{e^{-i(n\theta -r \sin(\theta))}}\,d\theta
+\end{equation*}
+
+
+
+
+
+
+\eexo
+\solution{
+The first step consists in expressing the first and second derivative of $J_n(r)$. This is done by a partial derivation with respect to $r$ of the function of the integral:
+\begin{align}
+	J_n'(r)&=\dfrac{1}{2\pi}\ds{\int_{-\pi}^{\pi}} [i\sin(\theta)] {e^{-i(n\theta -r \sin(\theta))}}\,d\theta\\
+	J_n''(r)&=\dfrac{1}{2\pi}\ds{\int_{-\pi}^{\pi}} [-\sin^2(\theta)] {e^{-i(n\theta -r \sin(\theta))}}\,d\theta\\
+\end{align} 
+Hence 
+
+\begin{align}
+	\nu(r)&=2\pi[rJ_n''(r)+rJ_n'(r)+(r^2-n^2)J_n(r)]\\
+	&=\ds{\int_{-\pi}^{\pi}} [-r^2\sin^2(\theta)+ri\sin(\theta)+r^2-n^2] {e^{-i(n\theta -r \sin(\theta))}}\,d\theta\\
+	&=\ds{\int_{-\pi}^{\pi}} [r^2\cos^2(\theta)-n^2] {e^{-i(n\theta -r \sin(\theta))}}\,d\theta+\ds{\int_{-\pi}^{\pi}} ri\sin(\theta) {e^{-i(n\theta -r \sin(\theta))}}\,d\theta
+	\end{align} 
+The first integral can be rewritten
+
+\begin{align}
+\ds{\int_{-\pi}^{\pi}} [r^2\cos^2(\theta)-n^2] {e^{-i(n\theta -r \sin(\theta))}}\,d\theta &=
+\ds{\int_{-\pi}^{\pi}} [r\cos(\theta)+n]\underbrace{[r\cos(\theta)-n] {e^{-i(n\theta -r \sin(\theta))}}}_{\dfrac{1}{i}\dfrac{\p }{\p \theta}\left[  e^{-i(n\theta -r \sin(\theta))} \right] }\,d\theta 
+	\end{align} 
+This can be integrated by part
+ 	
+	\begin{align}
+&\ds{\int_{-\pi}^{\pi}} [r^2\cos^2(\theta)-n^2] {e^{-i(n\theta -r \sin(\theta))}}\,d\theta =\\
+&\underbrace{\left[
+(r\cos(\theta)+n)\dfrac{e^{-i(n\theta -r \sin(\theta))}}{i}
+\right]_{-\pi}^{\pi}}_0
+-\ds{\int_{-\pi}^{\pi}} ri\sin(\theta) e^{-i(n\theta -r \sin(\theta))}  \,d\theta 
+	\end{align} 
+	Hence this first part of $\nu(r)$ is the oppposite of the remaining one. $\nu(r)$ is then zero and the Bessel function $J_n$ verifies the Bessel equation.
+	
+}

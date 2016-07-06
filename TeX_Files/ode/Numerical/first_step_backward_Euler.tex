@@ -1,0 +1,57 @@
+\bexo
+
+Compute the solutions $\tb{S}_1$ and $\tb{S}_2$ of Backward Euler's method for the first two steps $\Deltat$ and $2\Deltat$ for a conservative mass-spring system with $x_0=0$ and $v_0=1$.
+Show that this method is first order.
+\eexo
+\solution{
+One has
+\begin{equation}
+	\tb{I}_2-\Deltat[\bs{\alpha}]=
+	\begin{bmatrix}
+		1 & \omega_0^2\Deltat\\
+		-\Deltat & 1
+	\end{bmatrix}
+\end{equation}
+and 
+
+\begin{equation}
+	\left(\tb{I}_2-\Deltat[\bs{\alpha}]\right)^{-1}=\dfrac{1}{1+\omega_0^2\Deltat^2}
+	\begin{bmatrix}
+		1 & -\omega_0^2\Deltat\\
+		\Deltat & 1
+	\end{bmatrix}
+\end{equation}
+
+
+One has then
+\begin{equation}
+	\tb{S}_1=\dfrac{1}{1+\omega_0^2\Deltat^2}\begin{Bmatrix}
+		1\\
+		\Deltat
+	\end{Bmatrix}=\begin{Bmatrix}
+		1-\omega_0^2\Deltat^2\\
+		\Deltat
+	\end{Bmatrix}+\tr{O}(\Deltat^3)
+\end{equation}
+and
+\begin{equation}
+	\tb{S}_2=\dfrac{1}{(1+\omega_0^2\Deltat^2)^2}\begin{Bmatrix}
+		1-\omega_0^2\Deltat^2\\
+		2\Deltat
+	\end{Bmatrix}=\begin{Bmatrix}
+		1-3\omega_0^2\Deltat^2\\
+		\Deltat
+	\end{Bmatrix}+\tr{O}(\Deltat^3)
+\end{equation}
+
+The exact solution of the problem and its approximation for small $\Deltat$ at order $2$ are
+\begin{equation}
+		\tb{S}(\Deltat)=\begin{Bmatrix}
+		\cos(\omega_0\Deltat)\\
+		\dfrac{1}{\omega_0}\sin(\omega_0\Deltat)
+	\end{Bmatrix}\esp \lim_{\Deltat \rightarrow 0}\tb{S}(\Deltat)=\begin{Bmatrix}
+		1-\dfrac{\omega_0^2\Deltat^2}{2}\\
+		\Deltat
+	\end{Bmatrix}+\tr{O}(\Deltat^3).
+\end{equation} 
+The first two orders are correct. The method is then first order. }

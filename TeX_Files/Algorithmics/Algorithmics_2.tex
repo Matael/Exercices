@@ -1,0 +1,61 @@
+\bexo
+
+Lots of matrix obtained by discretization techniques are in a sparse form. It means that they are full of zeros. When you want to store these matrices, it is not necessary to use RAM for these coefficient. Hence a Matrix format called sparse is created. It consists in using three separate vectors:
+\begin{itemize}
+	\item a vector \tb{I} of integers corresponding to the line of coefficient \#$i$,
+	\item a vector \tb{J} of integers corresponding to the column of coefficient \#$i$, 
+	\item a vector \tb{C} of real numbers corresponding to the value of coefficients \#$i$.
+\end{itemize}
+These three vectors have the same length which corresponds to the number of non-zero coefficients of the matrix.  As title of example for the following matrix 
+
+\begin{equation}
+	[\tb{M}]=\begin{bmatrix}
+		3.2 & 0 &0\\
+		2.5&0 &1.23
+	\end{bmatrix}
+\end{equation}
+This matrix has 
+is stored as follows:
+\begin{align}
+	\tb{I}&=\begin{Bmatrix}
+		1 & 2 & 2
+	\end{Bmatrix}\\
+	\tb{J}&=\begin{Bmatrix}
+		1 & 1 & 3
+	\end{Bmatrix}\\
+	\tb{C}&=\begin{Bmatrix}
+		3.2 & 2.5 & 1.23
+	\end{Bmatrix}\\
+\end{align} 
+
+\begin{itemize}
+	\item What are the three vectors associated to the matrix $[\tb{M}_1]$ of dimension $n\times n$ 
+\begin{equation}
+	[\tb{M}_1]=\begin{bmatrix}
+		2 & -1 \\
+		-1&2 &-1\\
+		&\ddots&\ddots &\ddots \\
+		&&-1&2&-1\\
+		 &&&-1&2
+	\end{bmatrix}
+\end{equation}
+What is the advantage of the sparse format for such matrices in particular from a storage point of view.
+\item Write a function in Matlab/Octave function 
+\begin{verbatim}
+	dimension_sparse(I,J,C)
+\end{verbatim}
+where $I$, $J$ and $C$ are three vectors defining a matrix $[\tb{M}]$ in a sparse format. This function returns the dimension (number of lines and columns of this matrix). 
+\item Write a function in Matlab/Octave function 
+\begin{verbatim}
+	muliply_sparse(I,J,C,X)
+\end{verbatim}
+where $I$, $J$ and $C$ are three vectors defining a matrix $[\tb{M}]$ in a sparse format. X is a vector of the same size than the matrix stored in a classical form. This function returns a vector equal to the product $[\tb{M}]\tb{X}$ of matrix $[\tb{M}]$ by vector $\tb{X}$.
+\item Write a function which multiply two matrices in a sparse format. You can design this function as you want but explain clearly in the documentation what is doing the function with comments.
+\end{itemize}
+
+
+
+
+\eexo
+\solution{
+}

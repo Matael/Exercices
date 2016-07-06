@@ -1,0 +1,44 @@
+\bexo
+Tracer sur la même figure
+\begin{itemize}
+	\item $t\mapsto \sqrt{t^2}$
+	\item $t\mapsto \left(\sqrt{t}\right)^2$
+\end{itemize}
+	
+	\begin{center}
+	\begin{tikzpicture}
+	  \begin{axis}[line width=2pt,       legend columns=-1,   title=Fonctions à tracer,   xlabel={$t$},   ylabel={$f(t)$}, xmin=-2,
+xmax=2,
+ymin=-2, 
+ymax=2,
+	  legend to name=named , grid=major]
+	%	\addplot[white] expression[domain=-pi:pi,samples=500]{4*cos(180*x/pi)};
+	  \end{axis}
+	\end{tikzpicture}
+\ref{named}
+\end{center}
+
+
+	
+
+\eexo
+\solution{
+Les graphes des fonctions sont:\\
+
+	\begin{center}
+	\begin{tikzpicture}
+	  \begin{axis}[line width=2pt,       legend columns=-1,   title=Fonctions à tracer,   xlabel={$t$},   ylabel={$f(t)$}, xmin=-2,
+xmax=2,
+ymin=-2, 
+ymax=2,
+legend entries={$\sqrt{t^2}$,$\left(\sqrt{t}\right)^2$},
+	  legend to name=named , grid=major]
+		\addplot[blue] expression[domain=-2:2,samples=500]{abs(x)};
+		\addplot[green,samples=500] expression[domain=0:2]{abs(x)};
+\end{axis}
+	\end{tikzpicture}
+		  \ref{named}
+\end{center}
+
+
+}
