@@ -1,0 +1,217 @@
+\documentclass[10pt,a4paper,french]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{todo}   
+\usepackage{amssymb}
+\usepackage{graphicx,tabularx}         
+\usepackage{amsmath,amsfonts}%
+\usepackage{amsthm}
+\usepackage{xcolor}
+\usepackage{bm}%
+\usepackage{psfrag}%
+\usepackage{pict2e}
+\usepackage{mdframed,verbatim}
+\usepackage[tikz]{bclogo}
+\usepackage{epstopdf}
+\usepackage[colorlinks=true, pdfstartview=FitV, linkcolor=blue, 
+            citecolor=blue, urlcolor=blue]{hyperref}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathmorphing,patterns}
+\usepackage{pgfplots} 
+\newif\ifsolutions
+\solutionstrue 
+\solutionsfalse 
+\usepackage{commands_od}	
+
+% ------------------- Title and Author -----------------------------
+
+\begin{document}
+
+
+
+
+\begin{center}
+{\Large }
+ \begin{tabularx}{\linewidth}{c}
+\hline
+\end{tabularx}
+\end{center}
+\begin{center}
+ {\Large \textbf{Exam} -- \today}
+\end{center}
+ \begin{tabularx}{\linewidth}{c}
+\hline
+\end{tabularx}
+\setcounter{chapter}{1}
+
+
+
+\section{Objective}
+
+
+
+\section{Système Elément-fini discrétisé}
+
+Nous considérons le probèle discrétisé de $n$ sous-structures. Chaque sous-structure est représentée par son déplacement $\tb{U}_k$ ($k$ représente le numéro de la sous-structure). Chacune d'entre elle est modélisée indépendamment des autres et la dynamique est associée à une matrice de raideur $[\tb{K}_k]$ et une matrice de masse $[\tb{M}_k]$. L'assemblage entre les sous-structures est réalisé à l'aide de multiplicateurs de Lagrange $\bs{\lambda}$ représentant les forces de couplage aux noeuds des interfaces entre sous-structures.\\
+
+Le système éléments-finis global s'écrit:
+\begin{equation}\label{eq:systeme EF discretise n sous-structures}
+	\left[
+	\begin{array}{cc}
+		{[\tb{A}]} & {[\tb{L}]}\\
+		{[\tb{L}]^T}& {\ZM}
+	\end{array}
+	\right]\begin{Bmatrix}
+		\tb{U}\\\bs{\lambda}
+	\end{Bmatrix}=\begin{Bmatrix}
+		\tb{F}\\
+		\tb{0}
+	\end{Bmatrix}
+\end{equation}
+Le vecteur global des déplacements $\tb{U}$ est obtenu en concaténant les déplacement de chacune des sous-structures. La matrice dynamique $[\tb{A}]$ est obtenues en juxtaposant les blocs dynamiques de chacune des sous-structures. Ainsi:
+\begin{equation}
+	\tb{U}=\begin{Bmatrix}
+		\tb{U}_1\\
+		\vdots\\
+		\tb{U}_n
+	\end{Bmatrix}
+	\esp
+	[\tb{A}]=
+	\begin{bmatrix}
+		[\tb{K}_1]-\omega^2[\tb{M}_1]\\
+		& \ddots\\
+		&&[\tb{K}_n]-\omega^2[\tb{M}_n]
+	\end{bmatrix} 
+\end{equation}
+Le terme $[\tb{L}]\bs{\lambda}$ dans \refeq{eq:systeme EF discretise n sous-structures} traduit la continuité des forces entre sous-structures et le terme  $[\tb{L}]^T\tb{U}$ traduit la continuité des déplacements aux interfaces. 
+
+%
+%
+%In the case of a 1D problem, it reads:\begin{equation}
+%	[\tb{L}]=
+%	\begin{bmatrix}
+%		[\tb{L}_1^2]\\
+%		[\tb{L}_2^1] 
+%		&[\tb{L}_2^3] \\
+%		&\ddots\ddots \\
+%		& [\tb{L}_{n-1}^{n-2}]&[\tb{L}_{n-1}^{n}]
+%		\\
+%		&&	[\tb{L}_{n}^{n-1}]
+%	\end{bmatrix}
+%\end{equation}
+
+\section{Ecriture des bases modales}
+
+
+Pour chacune des sous-structures, une base modale $[\bs{\Phi}_k]$ peut être calculée à partir des matrices $[\tb{K}_k]$  $[\tb{M}_k]$. Cette base modale est associée à une matrice diagonale $[\bs{\Omega}^2_k]$ des pulsations propres aux carré.\\
+
+La base modale découplée globale $[\bs{\Phi}]$ est construite en juxtaposant les bases modales découplées: 
+\begin{equation}[\bs{\Phi}]=\left[
+	\begin{array}{cccccccc}
+		{[\bs{\Phi}_1]}\\
+	&\ddots \\
+	&&{[\bs{\Phi}_n]}
+		\end{array}\right]\end{equation}
+
+
+Pour chaque degré de liberté d'interface, un mode d'attache peut être calculé pour chacune des deux structures reliées au degré de liberté considéré. On peut ainsi construire une matrice $[\bs{\Psi}]$. La colonne associé au degré de liberté étant la concaténation des deux modes d'attache. On peut également construire un vecteur résiduel global $\bs{\Psi_F}$
+
+
+\section{Résolution modale sans correction}
+
+La résolution modale sans correction revient à considérer le changement de variable suivant:
+\begin{equation}
+		\tb{U}=[\bs{\Phi}]\tb{q}.
+\end{equation}
+$\tb{q}$ représente la contribution des modes élastiques. Seuls les modes de la structure sont conservés dans ce cas. Le système projeté sur la base modale s'écrit donc: 
+\begin{equation}\label{eq:systeme modal decouple}
+	\left[
+	\begin{array}{cc}
+		{[\bs{\Delta}]} & {[\bs{\Phi}]^T[\tb{L}]}\\
+		{[\tb{L}]^T[\bs{\Phi}]}& {\ZM}
+	\end{array}
+	\right]\begin{Bmatrix}
+		\tb{q}\\\bs{\lambda}
+	\end{Bmatrix}=\begin{Bmatrix}
+		[\bs{\Phi}]^T\tb{F}\\
+		\tb{0}
+	\end{Bmatrix}
+\end{equation}
+
+$[\bs{\Delta}]$ est la matrice dynamique qui s'écrit:
+
+\begin{equation}[\bs{\Delta}]=\left[
+	\begin{array}{cccccccc}
+		{[\bs{\Omega}^2_1]-\omega^2[\tb{I}]}\\
+	&\ddots \\
+	&&{[\bs{\Omega}^2_n]-\omega^2[\tb{I}]}
+		\end{array}\right]\end{equation}
+
+
+\section{Résolution modale avec correction}
+
+
+La résolution modale avec correction revient à considérer le changement de variable suivant:
+\begin{equation}
+		\tb{U}=[\bs{\Phi}]\tb{q}+[\bs{\Psi}]\bs{\lambda}+\bs{\Psi}_F.
+\end{equation}
+
+
+La seconde partie du système \refeq{eq:systeme EF discretise n sous-structures} se réécrit donc:
+\begin{equation}
+	[\tb{L}^T][\bs{\Phi}]\tb{q}+[\tb{L}^T][\bs{\Psi}]\bs{\lambda}=-[\tb{L}]^T\bs{\Psi}_F
+\end{equation}
+Cela nous permet donc de réécrire le multiplicateur de Lagrange $\bs{\lambda}$ en fonction de la contribution des modes élastiques et de vecteurs constants:
+\begin{equation}
+\bs{\lambda}=[\tb{C}_{\lambda q}]\tb{q}+\tb{F}_\lambda
+\end{equation}
+avec les matrices suivantes: 
+\begin{equation}
+	[\tb{C}_{\lambda q}]=-\left(
+	[\tb{L}^T][\bs{\Psi}]
+	\right)^{-1} [\tb{L}^T][\bs{\Phi}]\esp
+	\tb{F}_\lambda=-\left(
+	[\tb{L}^T][\bs{\Psi}]
+	\right)^{-1}[\tb{L}]^T\bs{\Psi}_F.
+\end{equation}
+On peut ainsi réécrire le vecteur des déplacements $\tb{U}$ en fonction de $\tb{q}$:
+\begin{equation}
+\tb{U}=[\hat{\bs{\Phi}}]\tb{q}+\hat{\tb{U}}
+\end{equation}
+
+La matrice $[\hat{\bs{\Phi}}]$ correspond à la matrice des modes globaux de la structure construit à partir d'un mode élastique et des corrections statiques des autres modes pour assurer la continuité des déplacement aux interfaces. $\hat{\tb{U}}$ correspond à la correction de déplacement due à la force. Ils sont définis par: 
+\begin{equation}
+[\hat{\bs{\Phi}}]=
+[\bs{\Phi}]+[\bs{\Psi}][\tb{C}_{\lambda q}] \esp \hat{\tb{U}}=[\bs{\Psi}]\tb{F}_{\lambda}+\bs{\Psi}_F.
+\end{equation}
+Notons que la continuité des forces est également assurée. \\
+
+Nous pouvons maintenant rechercher la contribution des modes $\tb{q}$. Pour cela, il faut projeter la première partie du système \refeq{eq:systeme EF discretise n sous-structures} sur la base des modes élastiques
+
+
+
+\begin{equation}
+	[\bs{\Phi}]^T\left( [\tb{A}][\hat{\bs{\Phi}}] \tb{q}+ \hat{\tb{U}}\right)+[\bs{\Phi}]^T[\tb{L}]\left(
+	[\tb{C}_{\lambda q}]\tb{q}+\tb{F}_\lambda
+	\right)=[\bs{\Phi}]^T\tb{F}
+\end{equation}
+
+Etant donné l'orthogonalité des familles des modes retenus $[\bs{\Phi}]$ et des modes d'attaches $[\bs{\Psi}]$ et $\bs{\Psi}_F$, on a 
+\begin{equation}
+	[\bs{\Phi}]^T [\tb{A}][\hat{\bs{\Phi}}]=[\bs{\Phi}]^T [\tb{A}][\bs{\Phi}]=[\bs{\Delta}] \esp 
+	[\bs{\Phi}]^T [\tb{A}]\hat{\tb{U}}=\tb{0}.
+\end{equation}
+Le système linéaire est alors:
+
+\begin{equation}
+\left([\bs{\Delta}] +[\bs{\Phi}]^T[\tb{L}][\tb{C}_{\lambda q}] \right)\tb{q}=[\bs{\Phi}]^T\left(\tb{F}-
+[\tb{L}]\tb{F}_{\lambda}\right).
+\end{equation}
+
+
+
+
+\end{document}
+\end
+

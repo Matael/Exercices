@@ -1,0 +1,33 @@
+\bexo
+Let consider the following matrices
+\begin{equation}
+	[\bs{\Phi}(\xi)]=\begin{bmatrix}
+		(1-\xi)/2\\
+		\xi/2
+	\end{bmatrix}
+\end{equation}
+Compute (if it exists)
+\begin{equation}
+	\dint{0}{1} [\bs{\Phi}(\xi)][\bs{\Phi}(\xi)]^T\,\d\xi,
+\end{equation}
+where $\tp$ is the transposition.
+\eexo
+
+\solution{The product of the matrices lead to:
+\begin{equation}
+ [\bs{\Phi}(\xi)][\bs{\Phi}(\xi)]^T=\dfrac{1}{4}
+ \begin{bmatrix}
+ 	(1-\xi)^2 & (1-\xi)\xi\\
+ 	(1-\xi)\xi & \xi^2\\
+ \end{bmatrix}
+ \end{equation}
+The integration can be done term by term and
+\begin{equation}
+	\dint{0}{1} [\bs{\Phi}(\xi)][\bs{\Phi}(\xi)]^T\,\d\xi=\dfrac{1}{4}
+ \begin{bmatrix}
+ 	1/3 & 1/6\\
+ 	1/6 & 1/3\\
+ \end{bmatrix}
+\end{equation} 
+}
+

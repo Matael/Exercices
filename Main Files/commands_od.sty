@@ -15,6 +15,7 @@
 \newcommand{\bexmp}{\begin{exmp}\normalfont}
 \newcommand{\eexmp}{\end{exmp}\vskip 0.3cm}
 \newmdtheoremenv[backgroundcolor=gray!10,linewidth=1.5pt]{df}{\underline{\tb{Definition}}}[chapter]
+
 \newcommand{\bd}{\begin{df}\normalfont}
 \newcommand{\ed}{\end{df}\vskip 0.3cm}
 \newmdtheoremenv[backgroundcolor=blue!5,linewidth=1.5pt]{prp}{\underline{\tb{Property}}}[chapter]
@@ -26,7 +27,7 @@
 \newmdtheoremenv[backgroundcolor=yellow!5,linewidth=1.5pt]{rslt}{\underline{\tb{Result}}}[chapter]
 \newcommand{\br}{\begin{rslt}}
 \newcommand{\er}{\end{rslt}\vskip 0.3cm}
-
+\renewcommand{\and}{\tr{ and }}
 \renewcommand{\arg}[1]{\textrm{arg}{\left(#1\right)}}
 
 \ifsolutions
@@ -44,19 +45,23 @@
 \newcommand{\orth}{^{\perp} }
 \newcommand{\tq}{\,|\, }
 \newcommand{\ul}{\underline}
-
+\newcommand{\with}{\tr{, with }}
+\newcommand{\ZM}{[\textbf{0}]}
+\newcommand{\ulb}[1]{\underline{\textbf{#1}}}
 % Nouvelles commandes
 \newcommand{\ds}{\displaystyle}
 \newcommand{\tb}{\textbf}
 \newcommand{\tr}{\textrm}
 \newcommand{\bs}{\boldsymbol}
-\newcommand{\tp}{\,^{t}}
-\newcommand{\h}{\,^{h}}
+\newcommand{\tp}{\,^T}
+\newcommand{\h}{\,^H}
 \newcommand{\mb}{\, \mathbb}
 %\newcommand{\pt}{\textbf{.}}
 \newcommand{\esp}{, \quad}
 \newcommand{\D}{\textrm{D}}
 \newcommand{\p}{\partial}
+\newcommand{\isfinite}{<\infty}
+
 
 \newcommand{\virt}[1]{\widehat{\textbf{#1}}}
 \newcommand{\To}{\longrightarrow}
@@ -74,7 +79,6 @@
 \newcommand{\phys}[1]{\widetilde{#1}}
 \newcommand{\Four}[1]{\mc{F}\left(#1\right)}
 \newcommand{\Fouri}[1]{\mc{F}^*\left(#1\right)}
-\renewcommand{\o}{\tr{o}}
 
 
 \newcommand{\oiom}{\oint_{\partial \Omega}}
@@ -86,8 +90,8 @@
 %\newcommand{\scal}[1][2]{\left<#1|#2\right>}
 \newcommand{\dev}[1]{\widehat{#1}}
 
-\newcommand{\mat}[1]{#1}
-\renewcommand{\mat}[1]{ \left[ \textbf{#1} \right]}
+
+\newcommand{\mat}[1]{ \left[ \textbf{#1} \right]}
 \renewcommand{\:}{\tb{:}}
 \newcommand{\chapterm}[1]{\markboth{\chaptername \thechapter.
  #1}{}}
@@ -114,7 +118,7 @@
 % Fin nouvelles commandes
 
 \newcommand{\espa}{\vspace*{10cm}}
-\renewcommand{\mat}[1]{#1}
+
 %\newcommand{\cj}[1]{\overline{#1}}
 \newcommand{\mc}{\mathcal}
 \newcommand{\ov}{\overline}
@@ -132,10 +136,17 @@
 \newcommand\flash[1]{\colorbox{yellow}{\textbf{#1}}}
 \newcommand{\resp}[1]{(resp. {#1})}
 \newcommand{\dsum}[2]{\displaystyle{\sum_{#1}^{#2}}\,}
+\newcommand{\dint}[2]{\displaystyle{\int_{#1}^{#2}}\,}
+
 \newcommand{\ie}[1]{(i.e. #1)}
+\newcommand{\eg}[1]{(i.e. #1)}
 \newcommand{\e}{{e}}
+\newcommand{\Deltat}{\Delta t}
 \newcommand{\dof}{$dof$}
-\renewcommand{\det}[1]{\tr{det}\left(#1\right)}
+\renewcommand{\det}[1]{\left|#1\right|}
+
+
+
 
 \definecolor{red}{RGB}{255,0,0}
 \definecolor{green}{RGB}{0,255,0}
@@ -143,14 +154,21 @@
 \definecolor{magenta}{RGB}{255,0,255}
 
 
-\newcommand{\more}{{\color{red}{\tb{To be completed}}}}
-\newcommand{\arevoir}{{\color{red}{\tb{Not satisfied}}}}
+\newcommand{\more}{{\color{red}{ \tb{To be completed}}}}
+\newcommand{\arevoir}{{\color{red}{ \tb{To be rewritten}}}}
+
+
 
 \newcommand{\od}[1]{{\color{red} \bf#1}}
+\newcommand{\odtopg}[1]{{\color{red}?Peter? \bf#1}}
+
+\newcommand{\particular}[1]{\color{red}{#1}}
+
+
 \setlength{\unitlength}{1cm}
 
  \renewcommand{\arraystretch}{2}
- 
+ \algrenewcommand{\algorithmiccomment}[1]{\hskip3em \Pisymbol{pzd}{42}  #1}
  
  \tikzstyle{damper}=[thick,decoration={markings,  
   mark connection node=dmp,

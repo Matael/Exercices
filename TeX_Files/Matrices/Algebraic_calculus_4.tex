@@ -1,0 +1,67 @@
+\bexo
+What are the conditions on $a$, $b$, $c$ and $d$ for matrix $\mat{M}$ to be its own inverse with
+\begin{equation}
+	\mat{M}=\begin{bmatrix}
+		a & b\\ c &d 
+	\end{bmatrix}.
+	\end{equation}
+\eexo 
+
+
+
+\solution{
+\begin{equation}
+	\mat{M}\mat{M}=\begin{bmatrix}
+		a & b\\ c &d 
+	\end{bmatrix}
+	\begin{bmatrix}
+		a & b\\ c &d 
+	\end{bmatrix}
+	=\begin{bmatrix}
+		a^2+bc & b(a+d)\\ c(a+d) &bc+d^2 
+	\end{bmatrix}
+\end{equation}
+Hence
+\begin{equation}
+	\left\{
+	\begin{array}{l}
+		a^2+bc=1\\
+		bc+d^2=1\\
+		b(a+d)=0\\
+		c(a+d)=0
+	\end{array}
+	\right.
+\end{equation}
+The combination of the first two equations provides $a^2=d^2$. Then we have several cases\\
+
+If $a=d=0$. In this case, the condition is $bc=1$.\\
+
+
+If $a=d\neq 0$. In this case, $b$ and $c$ are zero due to the last two equations. Then, $a^2=d^2=1$ so $a$ and $d$ are simultaneously $1$ or $-1$\\
+
+
+If $a=-d$ then the last two equations are satisfied and the condition is $a^2+bc=1$. If $a^2=1$ then $bc=0$ so either $b$ or $c$ is zero. 
+The matrices are then
+\begin{equation}
+\begin{bmatrix}
+		0 &\beta\\ 1/\beta & 0
+	\end{bmatrix}\esp
+	\begin{bmatrix}
+		1 &0\\0 & 1
+	\end{bmatrix}\esp\pm \begin{bmatrix}
+		1 &b\\0 & -1
+	\end{bmatrix}\esp\pm \begin{bmatrix}
+		1 &0\\ c & -1
+	\end{bmatrix}\esp\pm \begin{bmatrix}
+		\alpha &\beta\\ (1-\alpha^2)/\beta & -\alpha
+	\end{bmatrix}
+\end{equation}
+with $\beta\neq 0$ and $\alpha^2\neq \pm 1$
+ 
+
+}
+	
+
+
+
+

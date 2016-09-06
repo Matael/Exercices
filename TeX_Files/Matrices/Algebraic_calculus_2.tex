@@ -1,0 +1,36 @@
+\bexo
+The Forward Euler's Method is defined by the recurence relation:
+\begin{equation}
+	\tb{S}_{k+1}=\left(
+	[\tb{I}_2]+\Delta t[\bs{\alpha}]
+	\right)\tb{S}_k.
+\end{equation}
+Compute the first three steps $\tb{S}_1$, $\tb{S}_2$ and $\tb{S}_3$ of Forward Euler's Method for 
+\begin{equation}
+	[\bs{\alpha}]=\begin{bmatrix}
+		0 & -\omega_0^2 \\ 1 &0
+	\end{bmatrix} \esp \tb{S}_0=\begin{Bmatrix}
+		1\\0
+	\end{Bmatrix}
+\end{equation}
+\eexo 
+
+
+
+\solution{
+\begin{equation}
+\tb{S}_1=\begin{Bmatrix}
+	1\\\Delta t
+\end{Bmatrix} \esp 
+\tb{S}_2=\begin{Bmatrix}
+	1-\omega_0^2\Delta  t^2\\ 2\Delta t
+\end{Bmatrix}\esp
+\tb{S}_2=\begin{Bmatrix}
+	1-3\omega_0^2\Delta  t^2\\ \Delta t
+	\left(3-\omega_0^2\Delta  t^2
+	\right)
+\end{Bmatrix}.
+\end{equation}}
+
+
+

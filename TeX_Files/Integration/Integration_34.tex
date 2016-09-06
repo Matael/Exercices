@@ -1,0 +1,21 @@
+\bexo
+
+
+Show that 
+\begin{equation}
+	\dint{0}{\pi/2} \cos^n(x)\,\d x=
+		\dint{0}{\pi/2} \sin^n(x)\,\d x
+\end{equation}
+ 
+
+\eexo
+\solution{
+Let consider the variable change $t=\dfrac{\pi}{2}-x$ in the first integral:
+\begin{align}
+	\dint{0}{\pi/2} \cos^n(x)\,\d x
+	&=
+		\dint{\pi/2}{0} \cos^n\left(\dfrac{\pi}{2}-t\right)\,\left(-\d t\right)\\&=
+		\dint{0}{\pi/2} \cos^n\left(\dfrac{\pi}{2}-t\right)\,\d t\\&=
+		\dint{0}{\pi/2} \sin^n\left(t\right)\,\d t
+\end{align}
+}

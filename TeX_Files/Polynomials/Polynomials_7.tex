@@ -1,0 +1,77 @@
+\bexo
+Let consider polynomial  
+\begin{equation}
+	P(X)=X^3+(1+j)X^2+(-6+j)X-6j \esp j=\sqrt{1}.
+\end{equation}
+\begin{itemize}
+	\item Show that $-j$ is a root of $P$.
+	\item Find the two other roots.
+\end{itemize} 
+ 
+\eexo
+\solution{
+\begin{align}
+	P(j)&=j-(1+j)-j(-6+j)-6j=j-1-j+6j+1-6j=0
+\end{align}
+
+
+
+
+$-j$ is then one root of the polynomial. It is then possible to factorize $P$ by $(X+j)$. This can be done by two means. \\
+
+The first one is euclidian division
+\begin{equation}
+	\begin{array}{rrrrrrrrrr|l}
+	        &{X^3}&{+}&{(1+j)}&{X^2}&{+}&{(-6+j)}&{X}&{-}&{6j}&{X+j}\\	\cline{11-11} 
+\od{-}&	     {X^3}&{+}&{j}    &{X^2}&   &        &   &   &    &{X^2+X-6}\\ \cline{1-10} 
+      &           &   &       &{X^2}&{+}&{(-6+j)}&{X}&{-}&{6j}\\
+\od{-}&           &   &       &{X^2}&{+}&{j}&{X}&&\\    \cline{5-10} 
+      &           &   &       &     &{}&{-6}&{X}&-&6j\\  
+ \od{-}           &           &   &       &     &{}&{-6}&{X}&-&6j\\ \cline{7-10} 
+       &           &   &       &     &{}&{}&{}&&\tb{0}\\           
+	\end{array}
+\end{equation}
+
+
+The second method is the identification 
+
+\begin{align}
+	X^3+(1+j)X^2+(-6+j)X-6j&=(X+j)(aX^2+bX+c)\\
+	&=aX^3+(b+ja)X^2+(c+bj)X+cj
+\end{align}
+By identification of the coefficients in $X^3$:
+\begin{equation}
+	a=1.
+\end{equation}
+By identification of the coefficients in $X^2$:
+\begin{equation}
+	b+ja=1+j \so b=1.
+\end{equation}
+By identification of the coefficients in $X$:
+\begin{equation}
+	c+bj=-6+j \so c=-6.
+\end{equation}
+We can check that this value of $c$ is ok and leads to an identification of the term of zero order. 
+\begin{equation}
+	c+bj=-6+j \so c=-6.
+\end{equation}
+
+The two other roots of out polynomial are the one of $X^2+X-6$. Once more, two methods to find the result. \\
+
+The first one is the classical one
+\begin{equation}
+	\Delta=1^2+4\times 6=25=5^2
+\end{equation}
+
+The two roots are then
+\begin{equation}
+	\dfrac{-1\pm\sqrt{\Delta}}{2}\so X=2 \tr{ and } X=-3.
+\end{equation}
+
+The second method corresponds to the formula
+\begin{equation}
+	(X-x_1)(X-x_2)=X^2-(x_1+x_2)X+x_1x_2
+\end{equation}
+Hence $x_1+x_2=-1$ and $x_1x_2=-6$. The two roots are then $x_1=2$ and $x_2=-3$.
+
+}
