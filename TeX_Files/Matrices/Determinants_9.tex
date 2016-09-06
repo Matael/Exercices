@@ -1,0 +1,63 @@
+\bexo
+Given
+\begin{equation}
+	A = \begin{bmatrix}
+		1& 0\\ 1& 2
+	\end{bmatrix}
+	~~,~~
+	B = \begin{bmatrix}
+		7& 9\\ 0& 2
+	\end{bmatrix}
+	~~,~~
+	C = \begin{bmatrix}
+		5& 6\\ 4& 3
+	\end{bmatrix}
+	~~,~~
+	D = \begin{bmatrix}
+		2& 4\\ 5& 6
+	\end{bmatrix}
+\end{equation}
+
+and $\mathbf{0}_n$ a $n\times n$ matrix of zeros;
+
+evaluate
+
+\begin{equation}
+\det{\begin{matrix}
+	\mat{A}& \mathbf{0}_2\\
+	\mathbf{0}_2 & \mat{D}\\
+\end{matrix}}
+~~,~~
+\det{\begin{matrix}
+	\mat{A}& \mat{B}\\
+	\mathbf{0}_2 & \mat{D}\\
+\end{matrix}}
+~~,~~
+\det{\begin{matrix}
+	\mat{A}& \mathbf{0}_2\\
+	\mat{C} & \mat{D}\\
+\end{matrix}}
+\end{equation}
+
+What rule(s) can you deduce from the previous calculations?
+\eexo
+
+
+\solution{
+	The three matrices have the same determinant ($-16$), the extra-diagonal \textit{block} does not come in play.
+	The following equivalence then holds:
+	\begin{equation}
+		\det{\begin{matrix}
+			\mat{A}& \mat{B}\\
+			\mathbf{0}_2 & \mat{D}\\
+		\end{matrix}}
+		=
+		\det{\begin{matrix}
+			\mat{A}& \mathbf{0}_2\\
+			\mat{C} & \mat{D}\\
+		\end{matrix}}
+		=
+		\mathrm{det}(\mat{A})
+		\mathrm{det}(\mat{D})
+	\end{equation}
+}

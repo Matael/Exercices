@@ -1,0 +1,54 @@
+\bexo
+Trace the following vectors :
+\begin{equation}
+	\begin{Bmatrix} 2\\2 \end{Bmatrix}
+	~~,~~
+	\begin{Bmatrix} 1\\-1 \end{Bmatrix}
+	~~,~~
+	\begin{Bmatrix} -2\\-2 \end{Bmatrix}
+	~~,~~
+	\begin{Bmatrix} -1\\1 \end{Bmatrix}
+\end{equation}
+
+Considering that one can \textit{apply} a transformation to vectors using a matrical
+product with a transformation matrix $\mat{T}$ such as:
+
+\begin{equation}
+	\mathbf{v'} = \mat{T}\mathbf{v}
+\end{equation}
+
+can you tell what the following transforms do:
+
+\begin{equation}
+	\begin{bmatrix}
+		1& 0\\
+		0& -1
+	\end{bmatrix}
+	~~,~~
+	\begin{bmatrix}
+		s& 0\\
+		0& 1
+	\end{bmatrix}
+	~~,~~
+	\begin{bmatrix}
+		\cos\theta& -\sin\theta\\
+		\sin\theta& \cos\theta
+	\end{bmatrix}
+	~~,~~
+\end{equation}
+
+Compute the determinants of the transformation matrices and the ratio between vector norms
+before and after the transformation. What is the connection between the two quantities?
+
+\eexo
+
+\solution{
+	\hfill\\
+	\begin{enumerate}
+		\item inversion of $y$ axis
+		\item scale factor of $s$ on the $x$ axis
+		\item rotation of angle $\theta$
+	\end{enumerate}
+
+	The determinant describes how the space is dilatated by the transformation.
+}
