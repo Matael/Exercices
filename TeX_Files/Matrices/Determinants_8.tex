@@ -1,0 +1,48 @@
+\bexo
+Given
+
+\begin{equation}
+	\mat{A} = \begin{bmatrix}
+		1& 0& 0& 0\\
+		0& 1& 0& 1\\
+		1& 0& 1& 1\\
+		2& 3& 1& 1
+	\end{bmatrix}
+	~~,~~
+	\mat{P}_1 = \begin{bmatrix}
+		0& 0& 1& 0\\
+		0& 0& 0& 1\\
+		1& 0& 0& 0\\
+		0& 1& 0& 0
+	\end{bmatrix}
+	~~,~~
+	\mat{P}_2 = \begin{bmatrix}
+		1& 0& 0& 0\\
+		0& 0& 0& 1\\
+		0& 0& 1& 0\\
+		0& 1& 0& 0
+	\end{bmatrix}
+\end{equation}
+
+evaluate:
+
+\begin{enumerate}
+	\item $\mathrm{det}(\mat{A})$
+	\item $\mathrm{det}(\mat{P}_1\mat{A})$
+	\item $\mathrm{det}(\mat{P}_2\mat{A})$
+\end{enumerate}
+
+Can you deduce a more general rule for the determinants of permutated matrices?
+\eexo
+
+\solution{
+\hfill\\
+\begin{enumerate}
+	\item $-3$
+	\item $-3$
+	\item $3$
+\end{enumerate}
+
+The permutation matrix has a determinant of $(-1)^N$ with $N$ the number of permutations.
+}
+

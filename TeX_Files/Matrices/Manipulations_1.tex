@@ -1,0 +1,27 @@
+\bexo
+
+Given that
+
+\begin{equation}
+	\mat{P} = \begin{bmatrix}
+		1& 0& 0& 0\\
+		0& 0& 0& 1\\
+		0& 0& 1& 0\\
+		0& 1& 0& 0
+	\end{bmatrix}
+\end{equation}
+
+applied to another matrix $\mat{A}$ using $\mat{P}\mat{A}$ allows to permute the lines 2 and 4 how is it possible
+to permute columns 2 and 4?
+\eexo
+
+\solution{
+	The matrix multiplication is not commutative: a left-multiplication operates on lines,
+	the right-multiplication operates on columns.
+
+	\begin{equation}
+		\mat{A}\mat{P}
+	\end{equation}
+
+	will permute the \textit{columns} 2 and 4.
+}

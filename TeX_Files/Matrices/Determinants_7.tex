@@ -1,0 +1,47 @@
+\bexo
+Given
+
+\begin{equation}
+	\mat{A} = \begin{bmatrix}
+		1& 1& 0& 3\\
+		3& 4& 1& 3\\
+		1& 1& 0& 1\\
+		1& 0& 0& 3
+	\end{bmatrix}
+	~~,~~
+	\mat{P} = \begin{bmatrix}
+		1& 0& 0& 0\\
+		0& 0& 0& 1\\
+		0& 0& 1& 0\\
+		0& 1& 0& 0
+	\end{bmatrix}
+\end{equation}
+
+evaluate:
+
+\begin{enumerate}
+	\item $\mat{P}\mat{A}$
+	\item $\mathrm{det}(\mat{A})$
+	\item $\mathrm{det}(\mat{P}\mat{A})$
+\end{enumerate}
+
+What is the effect of $\mat{P}$ on $\mat{A}$?
+\eexo
+
+\solution{
+
+\hfill\\
+\begin{enumerate}
+	\item $$\mat{P}\mat{A} = \begin{bmatrix}
+			1& 1& 0& 3\\
+			1& 0& 0& 3\\
+			1& 1& 0& 1\\
+			3& 4& 1& 3
+		\end{bmatrix}$$
+	\item $2$
+	\item $-2$
+\end{enumerate}
+
+$\mat{P}$ \textit{permutes} 2 lignes of $\mat{A}$.
+}
+
