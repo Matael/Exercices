@@ -1,0 +1,49 @@
+% !TEX root = ../RAN_MFA.tex
+
+\bexo
+ Compute the value of 
+ \begin{equation}
+ 	I=\dint{-\infty}{\infty} e^{-x^2}\, d x
+ \end{equation}
+ Trick: You can start by considering $I^2$ and using the polar change of coordinates.
+\eexo
+
+\solution{
+\begin{align}
+ 	I^2&=\dint{-\infty}{\infty} e^{-x^2}\, d x
+ 	\dint{-\infty}{\infty} e^{-y^2}\, d y\\
+ 	&=\dint{-\infty}{\infty}\dint{-\infty}{\infty}
+ 	e^{-(x+y)^2}\, dxdy
+ \end{align}
+Let consider the variable change
+\begin{equation}
+	x=r\cos(\theta)\esp
+	y=r\sin(\theta).
+\end{equation}
+The Jacobian matrix of the transformation is 
+\begin{equation}
+	\mat{J}=\begin{bmatrix}
+ 		\dfrac{\p x}{\p r}& \dfrac{\p y}{\p r}\\
+ 		\dfrac{\p x}{\p \theta}& \dfrac{\p y}{\p \theta}
+ 	\end{bmatrix}=
+ 	\begin{bmatrix}
+ 		\cos(\theta) & \sin(\theta)\\
+ 		-r\sin(\theta) & r\cos(\theta)\\
+ 	\end{bmatrix}
+\end{equation}
+Its determinant is:
+\begin{equation}
+	\det{\mat{J}}=r
+\end{equation}
+
+\begin{align}
+ 	I^2&=\dint{r=0}{\infty}\dint{\theta=0}{2\pi}
+ 	e^{-r^2}r
+ 	\, dr\d\theta\\
+ 	I^2&=2\pi \Big[-e^{-r^2}\Big]_0^\infty=2\pi.
+ \end{align}
+We then have the value of $I$:
+\begin{equation}
+	I=\sqrt{2\pi}
+\end{equation}
+}

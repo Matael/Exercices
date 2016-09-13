@@ -1,0 +1,36 @@
+% !TEX root = ../RAN_MFA.tex
+
+\bexo
+ What are the value of 
+ \begin{equation}
+ 	I_1=\ds{\int_0^{2\pi}} \cos(x) \,dx 
+ 	\tr{ and   } 
+ 	I_2=\ds{\int_0^{2\pi}} \cos^2(x) \,dx\, ?
+ \end{equation}
+\eexo
+
+\solution{
+One has
+\begin{equation}
+	I_1=\dint{0}{2\pi} \cos(x)\,dx=\Big[
+	\sin(x)
+	\Big]_0^{2\pi}=0. 
+\end{equation}
+This is a classical result, in a period of a sinusoidal function, the area of the positive arch is equal to the one of the negative arch.\\
+
+For the second integral, a first comment $\sin^2(x)$ is not a primitive of $\cos^2(x)$ ! In order to compute $I_2$, it is necessary to use a trigonometric relations
+\begin{equation}
+	\cos(2x)=\cos^2(x)-\sin^2(x)\esp 1=\cos^2(x)+\sin^2(x) \so
+	\cos^2(x)=\dfrac{1+\cos(2x)}{2}.
+\end{equation}
+ \begin{equation}
+ 	I_2=\dfrac{1}{2}\ds{\int_0^{2\pi}} 1+\cos(2x) \,dx\, =\dfrac{1}{2}
+ 	\Bigg[
+	x+\dfrac{\sin(2x)}{2}
+	\Bigg]_0^{2\pi}=\pi.
+ 	 \end{equation}
+
+
+
+
+}

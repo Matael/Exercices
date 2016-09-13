@@ -1,0 +1,33 @@
+% !TEX root = ../RAN_MFA.tex
+
+\bexo
+ We are considering a monochromatic plane wave (circular frequency $\omega$ with a temporal dependance $e^{j\omega t}$) propagating in the 3D air. The complex representation of the pressure field is 
+$$
+p(x,t)=\hat{p}e^{j(\omega t-k_x x+k_y y +k_zz)},
+$$
+where $\{x,y,z\}$ are the cartesian coordinates and $\{k_x,k_y,k_z\}$ the components of the wave vector.\\
+
+The parameter of the air are its density $\rho$ and celerity $c$. Euler's equation and the constitutive law in the time domain read:
+$$ 
+\rho \dfrac{\p v}{\p t}=-\Gd p \esp p=-\rho c^2 \Div u \esp v=\dfrac{\p u}{\p t}.
+$$
+ 
+
+\begin{itemize}
+\item From Euler's equation, provide the expression of the complex amplitude of the velocity $\hat{\tb{v}}$
+\item Find the dispersion relation: i.e. the relation between the wave number components, the circular frequency and the properties of the medium 
+\end{itemize} 
+\eexo
+
+\solution{
+\begin{itemize}
+\item $\hat{\tb{v}}=\hat{p}\left\{
+\begin{array}{c}
+k_x\\
+k_y\\
+k_z
+\end{array}
+\right.$
+\item $k_x^2+k_y^2+k_z^2=\dfrac{\omega^2}{c^2}$
+\end{itemize} 
+}

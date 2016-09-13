@@ -1,0 +1,31 @@
+% !TEX root = ../RAN_MFA.tex
+
+\bexo
+ What are the expressions of $\cos^4(x)$ and $\sin^4(x)$ as function of $\cos(2x)$ and $\cos(4x)$.\\
+ 
+ You can use the Euler's and Newton's binomial formulas 
+ \begin{equation}
+ 	\cos(x)=\dfrac{e^{jx}+e^{-jx}}{2} \esp 
+ \sin(x)=\dfrac{e^{jx}-e^{-jx}}{2j} \esp 
+ (a+b)^n=\dsum{k=0}{n}\binom{n}{k} a^{n-k}b^k
+ \end{equation}
+\eexo
+
+\solution{
+From the binomial relation
+\begin{equation}
+	(a+b)^4=a^4+4a^3b+6a^2b^2+4ab^3+b^4.
+\end{equation}
+Then
+\begin{align}
+2^4\cos^4(x)&=e^{4jx}+4e^{2jx}+6+4e^{-2jx}+e^{-4jx}\\&=6+2\cos(4x)+4\cos(2x).\\
+\cos^4(x)&=\dfrac{3}{8}+\dfrac{1}{8}\cos(4x)+\dfrac{1}{2}\cos(2x).
+\end{align}
+Similarily
+\begin{align}
+2^4\sin^4(x)&=e^{4jx}-4e^{2jx}+6-4e^{-2jx}+e^{-4jx}\\&=6+2\cos(4x)-4\cos(2x).\\
+\sin^4(x)&=\dfrac{3}{8}+\dfrac{1}{8}\cos(4x)-\dfrac{1}{2}\cos(2x).
+\end{align}
+
+
+}

@@ -1,0 +1,31 @@
+% !TEX root = ../RAN_MFA.tex
+
+\bexo
+   Compute the following integrals:
+ \begin{align*}
+I_1&=	\ds{\int_0^{\pi/2}} \dfrac{\sin(t)}{1+\cos^2(t)} \,dt\\ 	
+I_2&=	\ds{\int_0^{\pi/2}} \dfrac{1}{\cos^2(t)(1+\tan(t))^2} \,dt\\ 	
+%I_3&=\ds{\int_0^{\pi/2}} \dfrac{1}{(1+\cos(t))} \,dt
+ \end{align*}
+% Trick for $I_3$: use the variable change $t=\tan\left(\dfrac{\theta}{2}\right)$
+\eexo
+
+\solution{
+For $I_1$, let consider the variable change $x=\cos(t)$. 
+\begin{equation}
+	I_1=\dint{0}{1} \dfrac{1}{1+x^2} \, dx=\Bigg[\tr{atan}(x)\Bigg]_0^1=\dfrac{\pi}{4}.
+	\end{equation}
+	For $I_2$, let consider the variable change $x=\tan(t)$
+	\begin{equation}
+	I_2=	\ds{\int_0^{\infty}} \dfrac{1}{(1+x)^2} \,dx	
+	\end{equation}
+Let now consider the second variable change $u=1+x$
+	\begin{equation}
+	I_2=	\ds{\int_1^{\infty}} \dfrac{1}{u^2} \,du	=\Bigg[-\dfrac{1}{x}\Bigg]_1^\infty=1
+	\end{equation}
+%	\begin{equation}
+%		\dfrac{dt}{d\theta}=
+%	\end{equation}
+	
+
+}
