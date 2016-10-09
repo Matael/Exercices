@@ -1,0 +1,28 @@
+\bexo
+
+On considère le circuit électrique ci-dessous.
+
+\begin{center}
+\begin{tikzpicture}[scale=1, >=stealth]
+	\draw (-.5,0) to[short, *-*] (5.5,0);
+	\draw (-.5,2) to[short, i=$i$, *-] (0,2) to[R=$R$] (2,2) to[L=$L$] (4,2) to[short, -*] (5.5,2);
+	\draw (4,2) to[C=$C$, *-*] (4,0);
+
+	\draw[->] (-.5,.2) -- ++(0,1.6) node[midway, left] {$U_E$};
+	\draw[->] (5.5,.2) -- ++(0,1.6) node[midway, right] {$U_S$};
+\end{tikzpicture}
+\end{center}
+
+\begin{enumerate}
+	\item Établir l'équation différentielle associée à l'évolution de $U_S$ dans le circuit
+		en veillant à bien prendre en compte la tension d'entrée $U_E$.
+	\item Résoudre l'équation différentielle et en dégager la solution générale dans le cas
+		ou $\left(\nicefrac{R}{L}\right)^2 < \nicefrac{4}{LC}$. La solution particulière est à
+		chercher sous la forme d'une constante.
+	\item Rappeler quel système mécanique se comporte de manière similaire et indiquer la
+		correspondance entre les composants électriques et les éléments mécaniques.
+	\item En sachant que le système mécanique est régi par une équation de la forme :
+		$x''(t) + 2\mu x'(t) + \omega_0^2x(t) = F$ indiquer quelle analogie est sous-entendue.
+	\item Quel est l'avantage de disposer d'analogies électro-mécaniques ?
+\end{enumerate}
+\eexo

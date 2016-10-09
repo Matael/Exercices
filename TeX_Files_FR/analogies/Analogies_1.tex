@@ -1,0 +1,38 @@
+\bexo
+
+On considère un circuit électrique composé d'une bobine d'inductance $L$ et d'une
+résistance $R$ en série avec un générateur de tension délivrant une tension continue $E$.
+
+\begin{center}
+\begin{tikzpicture}[scale=1]
+	\draw (0,0) to[short, i=$i$] (0,1) to[R=$R$, i=$i_1$] (2,1) to[L=$L$, i=$i_2$] (4,1) to[short] (4,0) to[V=$E$] (0,0);
+\end{tikzpicture}
+\end{center}
+
+\begin{enumerate}
+	\item Rappeler les deux lois fondamentales d'électricité s'appliquant dans le circuit.
+	\item Montrer que l'équation différentielle régissant l'évolution du courant $i$ dans le
+		circuit est \[L\frac{\dd i(t)}{\dd t} + Ri(t) = E\]
+	\item En considérant une analogie courant-vitesse, établir le lien entre le système
+		électrique et la chute d'une masse ($m$) en fluide visqueux (constante de frottement
+		$c$). Rappeler l'équation différentielle pour le système mécanique et établir la
+		correspondance entre les quantités des deux domaines.
+	\item Déduire des équations différentielles les constantes de temps $\tau$ mécaniques et
+		électriques telles que: $x(t) = \alpha e^{\nicefrac{t}{\tau}}$ (avec $\alpha$ une constante).
+	\item On considère que la masse du système mécanique commence sa chute sans vitesse
+		initiale. Transcrire cette condition initiale dans le domaine électrique.
+	\item Résoudre l'équation différentielle dans le domaine électrique.
+	\item Tracer l'allure de l'intensité en fonction du temps.
+\end{enumerate}
+
+À toutes fins utiles, on rappelle les lois de comportement suivantes (convention
+récepteur) :
+
+\begin{equation*}
+	q(t) = CU_C(t) ~~,~~ i_C(t) = \frac{\dd q(t)}{\dd t} ~~,~~ U_L(t) = L\frac{\dd i_L(t)}{\dd t} ~~,~~ U_R(t)
+	= Ri_R(t)
+\end{equation*}
+
+\bigskip
+
+\eexo
